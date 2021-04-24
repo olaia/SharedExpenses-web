@@ -19,7 +19,7 @@
           id="name"
           name="name"
           placeholder="Enter your name"
-          required #name="ngModel">
+          #name="ngModel">
       </div>
 
       <div class="form-group">
@@ -29,7 +29,7 @@
           id="lastname"
           name="lastname"
           placeholder="Enter your lastname"
-          required #lastname="ngModel">
+          #lastname="ngModel">
       </div>
 
       <button type="submit" [disabled]="!userForm.form.valid"
