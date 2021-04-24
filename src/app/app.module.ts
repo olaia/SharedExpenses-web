@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, LOCALE_ID } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { FlexLayoutModule } from '@angular/flex-layout';
@@ -11,12 +11,19 @@ import { UserFormComponent } from './user-form/user-form.component';
 import { PersonService } from './service/person.service';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
+import { MycurrencyPipe } from './custom.currencypipe';
+import { registerLocaleData } from '@angular/common';
+
+import localeEs from '@angular/common/locales/es';
+
+registerLocaleData(localeEs, 'es');
 
 @NgModule({
   declarations: [
     AppComponent,
     PersonListComponent,
-    UserFormComponent
+    UserFormComponent,
+    MycurrencyPipe
   ],
   imports: [
     BrowserModule,
@@ -26,7 +33,13 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule,
     AppRoutingModule
   ],
-  providers: [PersonService],
+  providers: [
+    PersonService,
+    {
+      provide: LOCALE_ID,
+      useValue: 'es' // 'de' for Germany, 'fr' for France ...
+     }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
