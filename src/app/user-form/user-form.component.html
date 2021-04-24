@@ -1,4 +1,3 @@
-<h1>user form!</h1>
 <div class="card my-5">
   <div class="card-body">
     <form (ngSubmit)="onSubmit()" #userForm="ngForm">
@@ -9,7 +8,7 @@
           id="username"
           name="username"
           placeholder="Enter your username"
-          required #name="ngModel">
+          required #username="ngModel">
       </div>
       <div [hidden]="!name.pristine" class="alert alert-danger">Username is required</div>
 
@@ -30,7 +29,7 @@
           id="lastname"
           name="lastname"
           placeholder="Enter your lastname"
-          required #name="ngModel">
+          required #lastname="ngModel">
       </div>
 
       <button type="submit" [disabled]="!userForm.form.valid"

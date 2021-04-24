@@ -7,9 +7,11 @@ import { Observable } from 'rxjs';
 export class PersonService {
 
   private balanceUrl: string;
+  private addFriendUrl: string;
 
   constructor(private http: HttpClient) {
     this.balanceUrl = 'http://localhost:8080/friends/getBalance';
+    this.addFriendUrl = 'http://localhost:8080/friends/addFriend';
    }
 
    public getBalance(): Observable<Person[]> {
@@ -17,6 +19,6 @@ export class PersonService {
    }
 
    public save(person: Person) {
-     return this.http.post<Person>(this.balanceUrl, person);
+     return this.http.post<Person>(this.addFriendUrl, person);
    }
 }
