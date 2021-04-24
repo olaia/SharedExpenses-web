@@ -10,6 +10,7 @@ import Big from 'big.js';
 import { UserFormComponent } from './user-form/user-form.component';
 import { PersonService } from './service/person.service';
 import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { AppRoutingModule } from './app-routing.module';
     FormsModule,
     RouterModule,
     FlexLayoutModule,
+    HttpClientModule,
     AppRoutingModule
   ],
   providers: [PersonService],

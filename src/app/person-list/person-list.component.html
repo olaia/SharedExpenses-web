@@ -1,11 +1,13 @@
+<h1>user list!</h1>
 <div class="card my-5">
   <div class="card-body">
     <table class="table table-bordered table-striped">
       <thead class="thead-dark">
         <tr>
-          <th scope="col">#</th>
+          <th scope="col">Username</th>
           <th scope="col">Name</th>
-          <th scope="col">Email</th>
+          <th scope="col">Lastname</th>
+          <th scope="col">Balance</th>
         </tr>
       </thead>
       <tbody>
@@ -13,6 +15,7 @@
           <td>{{ person.username }}</td>
           <td>{{ person.name }}</td>
           <td>{{ person.lastname }}</td>
+          <td>{{ person.balance }}</td>
         </tr>
       </tbody>
     </table>

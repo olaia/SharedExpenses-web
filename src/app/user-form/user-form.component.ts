@@ -24,7 +24,7 @@ export class UserFormComponent {
   }
 
   gotoUserList(){
-    this.router.navigate(['/friends/getBalance'])
+    this.router.navigate(['users'])
   }
 
 }
