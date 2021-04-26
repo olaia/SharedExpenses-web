@@ -47,5 +47,5 @@ export class AdduserComponent implements OnInit {
         console.log("The form is NOT valid");
         this.formSubmitted = false;
     }
-  }
+}
 }
