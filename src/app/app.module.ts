@@ -9,7 +9,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ExpenseFormComponent } from './components/expense-form/expense-form.component';
 import { ExpenseListComponent } from './components/expense-list/expense-list.component';
 import { UserListComponent } from './components/user-list/user-list.component';
 import { MycurrencyPipe } from './pipes/custom.currencypipe';
@@ -23,8 +22,7 @@ registerLocaleData(localeEs, 'es');
     AppComponent,
     UserListComponent,
     MycurrencyPipe,
-    ExpenseListComponent,
-    ExpenseFormComponent
+    ExpenseListComponent
   ],
   imports: [
     BrowserModule,

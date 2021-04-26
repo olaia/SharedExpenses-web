@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ExpenseFormComponent } from './expense-form.component';
+import { AddexpenseComponent } from './addexpense.component';
 
-describe('ExpenseFormComponent', () => {
-  let component: ExpenseFormComponent;
-  let fixture: ComponentFixture<ExpenseFormComponent>;
+describe('AddexpenseComponent', () => {
+  let component: AddexpenseComponent;
+  let fixture: ComponentFixture<AddexpenseComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ExpenseFormComponent ]
+      declarations: [ AddexpenseComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ExpenseFormComponent);
+    fixture = TestBed.createComponent(AddexpenseComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
