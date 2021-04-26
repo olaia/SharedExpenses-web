@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Person } from '../model/person';
+import { User } from '../model/user';
 import { Observable } from 'rxjs';
 
 @Injectable()
-export class PersonService {
+export class UserService {
 
   private balanceUrl: string;
   private addFriendUrl: string;
@@ -14,11 +14,11 @@ export class PersonService {
     this.addFriendUrl = 'http://localhost:8080/friends/addFriend';
    }
 
-   public getBalance(): Observable<Person[]> {
-     return this.http.get<Person[]>(this.balanceUrl);
+   public getBalance(): Observable<User[]> {
+     return this.http.get<User[]>(this.balanceUrl);
    }
 
-   public save(person: Person) {
-     return this.http.post<Person>(this.addFriendUrl, person);
+   public save(person: User) {
+     return this.http.post<User>(this.addFriendUrl, person);
    }
 }

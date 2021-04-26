@@ -5,13 +5,13 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
-import { PersonListComponent } from './person-list/person-list.component';
+import { UserListComponent } from './components/user-list/user-list.component';
 import Big from 'big.js';
-import { UserFormComponent } from './user-form/user-form.component';
-import { PersonService } from './service/person.service';
+import { UserFormComponent } from './components/user-form/user-form.component';
+import { UserService } from './service/user.service';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
-import { MycurrencyPipe } from './custom.currencypipe';
+import { MycurrencyPipe } from './pipes/custom.currencypipe';
 import { registerLocaleData } from '@angular/common';
 
 import localeEs from '@angular/common/locales/es';
@@ -21,7 +21,7 @@ registerLocaleData(localeEs, 'es');
 @NgModule({
   declarations: [
     AppComponent,
-    PersonListComponent,
+    UserListComponent,
     UserFormComponent,
     MycurrencyPipe
   ],
@@ -34,7 +34,7 @@ registerLocaleData(localeEs, 'es');
     AppRoutingModule
   ],
   providers: [
-    PersonService,
+    UserService,
     {
       provide: LOCALE_ID,
       useValue: 'es' // 'de' for Germany, 'fr' for France ...
