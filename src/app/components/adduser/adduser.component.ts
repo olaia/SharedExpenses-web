@@ -17,8 +17,8 @@ export class AdduserComponent implements OnInit {
   ngOnInit(): void {
     this.form = this.fb.group({
       'username': ['', Validators.compose([Validators.required])],
-      'name': ['', Validators.compose([Validators.required])],
-      'lastname': ['', Validators.compose([Validators.required])]
+      'name': ['', Validators.compose([Validators.nullValidator])],
+      'lastname': ['', Validators.compose([Validators.nullValidator])]
     });
   }
 
