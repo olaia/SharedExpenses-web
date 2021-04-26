@@ -1,12 +1,16 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Routes, RouterModule } from '@angular/router';
-import { UserListComponent } from './components/user-list/user-list.component';
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+import { ExpenseFormComponent } from './components/expense-form/expense-form.component';
+import { ExpenseListComponent } from './components/expense-list/expense-list.component';
 import { UserFormComponent } from './components/user-form/user-form.component';
+import { UserListComponent } from './components/user-list/user-list.component';
 
 const routes: Routes = [
   { path: 'users', component: UserListComponent },
-  { path: 'adduser', component: UserFormComponent }
+  { path: 'adduser', component: UserFormComponent },
+  { path: 'addexpense', component: ExpenseFormComponent },
+  { path: 'listexpenses', component: ExpenseListComponent }
 ];
 
 @NgModule({

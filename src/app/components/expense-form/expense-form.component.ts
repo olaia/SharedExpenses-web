@@ -1,15 +1,29 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Expense } from 'src/app/model/expense/expense';
+import { ExpenseService } from 'src/app/service/expense/expense.service';
 
 @Component({
   selector: 'app-expense-form',
   templateUrl: './expense-form.component.html',
   styleUrls: ['./expense-form.component.css']
 })
-export class ExpenseFormComponent implements OnInit {
+export class ExpenseFormComponent {
 
-  constructor() { }
+  expense: Expense;
 
-  ngOnInit(): void {
+  constructor(
+    private route: ActivatedRoute,
+    private router: Router,
+    private expenseService: ExpenseService) {
+      this.expense = new Expense();
+    }
+
+  onSubmit(){
+    this.expenseService.addExpense(this.expense).subscribe(result => this.gotoExpenseList());
+  }
+  gotoExpenseList() {
+    this.router.navigate(['listexpenses']);
   }
 
 }
