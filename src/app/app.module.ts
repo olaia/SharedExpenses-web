@@ -4,8 +4,6 @@ import localeEs from '@angular/common/locales/es';
 import { LOCALE_ID, NgModule } from '@angular/core';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule } from '@angular/forms';
-import { MatListModule } from '@angular/material/list';
-import { MatTableModule } from '@angular/material/table';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
@@ -33,9 +31,7 @@ registerLocaleData(localeEs, 'es');
     FlexLayoutModule,
     HttpClientModule,
     AppRoutingModule,
-    BrowserAnimationsModule,
-    MatListModule,
-    MatTableModule
+    BrowserAnimationsModule
   ],
   providers: [
     UserService,
