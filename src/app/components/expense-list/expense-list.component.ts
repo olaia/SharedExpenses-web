@@ -10,7 +10,7 @@ import { ExpenseService } from 'src/app/service/expense/expense.service';
 export class ExpenseListComponent implements OnInit {
 
   expenses: Expense[];
-  // response: Expense[];
+  displayedColumns: string[] = ['username', 'description', 'date', 'amount'];
 
   constructor(private expenseService: ExpenseService) { }
 
