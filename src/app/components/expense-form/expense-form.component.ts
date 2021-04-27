@@ -6,7 +6,7 @@ import { ExpenseService } from 'src/app/service/expense/expense.service';
 @Component({
   selector: 'app-expense-form',
   templateUrl: './expense-form.component.html',
-  styleUrls: ['./expense-form.component.css']
+  styleUrls: ['../../../assets/forms.css']
 })
 export class ExpenseFormComponent {
 

@@ -1,28 +1,40 @@
-<div class="container">
-  <div class="row">
-    <div class="col-md-12">
-      <div class="card bg-dark my-5">
-        <div class="card-body">
-          <h2 class="card-title text-center text-white py-3">{{ title }}</h2>
-          <ul class="text-center list-inline py-3">
-            <li class="list-inline-item">
-              <a routerLink="/users" class="btn btn-info">List Users</a>
-                </li>
-            <li class="list-inline-item">
-              <a routerLink="/adduser" class="btn btn-info">Add User</a>
-                </li>
-            <li class="list-inline-item">
-              <a routerLink="/addexpense" class="btn btn-info">Add Expense</a>
-                </li>
-            <li class="list-inline-item">
-              <a routerLink="/listexpenses" class="btn btn-info">List Expenses</a>
-                </li>
-          </ul>
-        </div>
+<div class="container"
+    fxLayout="column"
+    fxLayoutAlign="center"
+    fxLayoutGap="10px"
+    fxLayoutAlign.xs="center">
+  <div class="container"
+    fxLayout
+    fxLayout.xs="column"
+    fxLayoutAlign="center"
+    fxLayoutGap="10px">
+    <a routerLink="/adduser">
+      <div class="button" >
+        Add User
       </div>
-      <router-outlet></router-outlet>
-    </div>
+    </a>
+    <a routerLink="/users">
+      <div class="button">
+        See Group Balance
+      </div>
+    </a>
+    <a routerLink="/addexpense">
+      <div class="button">
+        Add Expense
+      </div>
+    </a>
+    <a routerLink="/listexpenses">
+      <div class="button">
+        List Expense
+      </div>
+    </a>
+  </div>
+
+  <div class="container"
+    fxLayout="column"
+    fxLayoutAlign="center"
+    fxLayoutGap="10px"
+    fxLayoutAlign.xs="center">
+    <router-outlet></router-outlet>
   </div>
 </div>
-
-
