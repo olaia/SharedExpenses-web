@@ -6,6 +6,33 @@
   border-left: 5px solid #a94442; /* red */
 }
 
+
+
+.input-icon {
+  position: relative;
+}
+
+.input-icon > i {
+  position: absolute;
+  display: block;
+  transform: translate(0, -50%);
+  top: 50%;
+  pointer-events: none;
+  width: 25px;
+}
+
+.input-icon > input {
+  padding-right: 0;
+}
+
+.input-icon-right > i {
+  right: 0;
+}
+
+.input-icon-right > input {
+  padding-right: 25px;
+}
+
  /* Style inputs, select elements and textareas */
  input[type=text], input[type=number], select, textarea{
   width: 100%;
@@ -14,6 +41,7 @@
   border-radius: 4px;
   box-sizing: border-box;
   resize: vertical;
+  font-family: sans-serif;
 }
 
 /* Style the label to display next to the inputs */
@@ -44,6 +72,13 @@ input[disabled] {
   cursor: pointer;
   float: right;
 }
+
+/* .currencyinput {
+  border: 1px inset #ccc;
+}
+.currencyinput input {
+  border: 0;
+} */
 
 /* Style the container */
 .container {
@@ -88,4 +123,3 @@ input[disabled] {
     width: 500px;
   }
 }
-

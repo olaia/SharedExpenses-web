@@ -19,12 +19,13 @@
         <label for="amount">Amount</label>
       </div>
       <div class="col-75">
+        <div class="input-icon input-icon-right">
         <input type="number" min="1" step="any" [(ngModel)]="expense.amount"
           class="form-control"
           id="amount"
           name="amount"
           placeholder="Enter the amount in euros"
-          required #amount="ngModel">
+          required #amount="ngModel"><i>€</i></div>
       </div>
       <div [hidden]="!amount.pristine" class="alert alert-danger">Amount is required</div>
     </div>
