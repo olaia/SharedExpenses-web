@@ -11,8 +11,8 @@
           name="username"
           placeholder="Enter the username"
           required #username="ngModel">
-      </div>
        <div [hidden]="!username.pristine" class="alert alert-danger">Username is required</div>
+      </div>
     </div>
     <div class="row">
       <div class="col-25">
@@ -26,8 +26,8 @@
           name="amount"
           placeholder="Enter the amount in euros"
           required #amount="ngModel"><i>€</i></div>
-      </div>
       <div [hidden]="!amount.pristine" class="alert alert-danger">Amount is required</div>
+      </div>
     </div>
     <div class="row">
       <div class="col-25">
