@@ -33,7 +33,7 @@ input[type=submit] {
   cursor: pointer;
   float: right;
 }
-/* input[type=submit],
+
 input[disabled] {
   background-color: #82b184;
   color: white;
@@ -43,13 +43,15 @@ input[disabled] {
   border-radius: 4px;
   cursor: pointer;
   float: right;
-} */
+}
 
 /* Style the container */
 .container {
   border-radius: 5px;
   background-color: #f2f2f2;
   padding: 20px;
+  width: 100%;
+  align-items: center;
 }
 
 /* Floating column for labels: 25% width */
@@ -78,6 +80,12 @@ input[disabled] {
   .col-25, .col-75, input[type=submit] {
     width: 100%;
     margin-top: 0;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .container {
+    width: 500px;
   }
 }
 
